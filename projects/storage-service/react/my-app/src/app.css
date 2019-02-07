@@ -1,0 +1,160 @@
+input{
+  text-align: center;
+  margin-top: 50%;
+  width: 30%;
+  margin: 20px 20px 20px;
+  margin-right: 70%;
+  display: inline-block;
+  border: none;
+  background-color: #ddd;
+  outline: none;
+  padding: 8px 8px 18px;
+  display: inline-block;
+}
+.text{
+text-align: center;
+  font-style: italic;
+   color: teal;
+   font-size: 100%;
+  margin-left:-35%
+}
+.link{
+    float: right;
+  font-style: italic;
+  padding:-9%;
+
+}
+.login{
+  text-align: center;
+  font-style: italic;
+   color: teal;
+   font-size: 200%;
+   margin-left:-25%;
+   padding: 15px;
+}
+h3{
+  font-style: italic;
+font-size: 200%
+}
+.blocks{
+    text-align: center;
+ font-style: italic;
+  color: teal;
+  font-size: 200%;
+  margin-left:-85%;
+  padding: 15px;
+}
+.block{
+  text-align: center;
+  font-style: italic;
+   color: teal;
+   font-size: 150%;
+   margin-left:-85%;
+   padding: 15px;
+}
+
+h1{
+  text-align: center;
+ font-style: italic;
+  color: teal;
+  font-size: 200%;
+  margin-left:-45%;
+  padding: 15px;
+
+}
+h2{
+  text-align: center;
+  font-style: italic;
+   color: teal;
+   font-size: 150%;
+  margin-left:-35%
+
+ }
+.button{
+  background-color:black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.registerbutton{
+  background-color:green;
+  color: white;
+  padding: 2px 8px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  opacity: 0.9;
+}
+
+body{
+    background: #F0F8FF;
+    color: teal;
+    font-size: 20px;
+}
+th, td {
+  border: 1px solid #bbb;
+  padding: 2px 8px 0;
+  text-align: left;
+}
+ .busid{
+   margin: 1%;
+   padding:1%
+ }
+ .home{
+   font-size: 230%;
+   margin-left: 40%;
+    margin-block-start: 8%;
+ }
+ body {
+  background-image: url("units.jpg");
+  background-color: #cccccc;
+  background-size:100%;
+  background-repeat: no-repeat;
+}
+.homebutton{
+    margin-left: 40%;
+    display: inline-block;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    background: #ddd;
+    font: 12px Verdana;
+    padding: 20px; 
+    text-align: center;
+}
+.rentbutton{
+  margin-left: 1%;
+  display: inline-block;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  background: #ddd;
+  font: 12px Verdana;
+  padding: 20px; 
+  text-align: center; 
+}
+.link{
+  margin-left: 6%;
+  padding:-4%;
+ 
+}
+.register{
+  margin-left: 1%;
+  padding:-2%;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
