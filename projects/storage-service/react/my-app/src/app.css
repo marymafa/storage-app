@@ -11,15 +11,10 @@ input{
   padding: 8px 8px 18px;
   display: inline-block;
 }
-
 body{
   text-align: center
 }
-input[type="email"] {
-  display: block;
-  margin : 0 auto;
-}
-input[type="password"] {
+input[type="password"],[type="text"],[type="email"],[type="tel"]{
   display: block;
   margin : 0 auto;
 }
@@ -27,7 +22,7 @@ input[type="password"] {
 .text{
 text-align: center;
   font-style: italic;
-   color: teal;
+   color: black;
    font-size: 100%;
   margin-left:-35%
 }
@@ -48,8 +43,13 @@ text-align: center;
 h3{
 font-style: italic;
 font-size: 150%;
-margin-left:10%;
+margin-left:9%;
+}
 
+.heading{
+  font-style: italic;
+  font-size: 150%;
+  margin-left:-5%; 
 }
 .blocks{
     text-align: center;
