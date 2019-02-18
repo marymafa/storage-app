@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import * as action from "../redux/actions";
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link} from 'react-router-dom';
 
 class UnitTypesFrom extends React.Component {
     constructor(props) {
@@ -88,8 +88,8 @@ class UnitTypesFrom extends React.Component {
         console.log("props", this.props)
         return (
             <div >
-                <h1 className="blocks">Storage Service</h1>
-                <h2 className="block">Fill in the details below</h2>
+               <div className="log"> <Link to="/login" >login</Link></div>
+                <h2 className="heading">Fill in the details below</h2>
                 <div>
                     <label>Name</label>
                     <input data-toggle="tooltip" data-placement="top" title="name" type="text" onChange={this.inputName} />
