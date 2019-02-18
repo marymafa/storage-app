@@ -76,7 +76,7 @@ module.exports = function (req, res, next) {
                     return cb(err);
                 });
         }
-    )); re
+    )); 
 }
 
 

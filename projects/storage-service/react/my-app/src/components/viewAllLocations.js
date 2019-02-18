@@ -38,6 +38,7 @@ class AllLocations extends Component {
             < div >
                 <div>
                     <Link to="/" >Logout</Link> |
+                    <Link to="/viewCustomerDetails">view details</Link>|
                     <Link to="/login" >login</Link>
                 </div>
                 <h1>All Locations</h1>

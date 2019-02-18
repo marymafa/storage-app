@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import { connect } from "react-redux";
 import * as action from "../redux/actions";
+import { Link } from 'react-router-dom';
+
 
 class AllBusinesses extends Component {
     constructor(props) {
@@ -39,7 +41,9 @@ class AllBusinesses extends Component {
         }
         return (
             <div>
-                <h1>All businesses</h1>
+                 <Link to="/viewCustomerDetails">view details</Link>|
+                 <Link to="/" >Logout</Link>|
+                <h1>View details if you've rented a unit Or select the location of the business below</h1>
                 <div className="busid">
                     <label>
                         Business:
