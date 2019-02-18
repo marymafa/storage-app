@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import * as action from "../redux/actions";
-import { Redirect } from 'react-router-dom';
+import { Redirect , Link} from 'react-router-dom';
 import axios from "axios";
 import { log } from "util";
 
@@ -68,6 +68,7 @@ class LocationForm extends React.Component {
     render() {
         return (
             <div>
+                <div className="log"><Link to="/" >Logout</Link></div>
                 <h3 className="heading"> Please fill in this form </h3>
                 <div>
                     <label>Address</label>
