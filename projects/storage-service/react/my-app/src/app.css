@@ -130,8 +130,8 @@ th, td {
  }
  .home{
    font-size: 230%;
-   margin-left: 40%;
-    margin-block-start: 8%;
+   margin-left: 4%;
+    margin-block-start: 2%;
  }
  body {
   background-image: url("units.jpg");
@@ -140,7 +140,7 @@ th, td {
   background-repeat: no-repeat;
 }
 .homebutton{
-    margin-left: 40%;
+    margin-left: 4%;
     display: inline-block;
     border: 0;
     text-decoration: none;
