@@ -1,8 +1,27 @@
+FROM node:8.10.0-alpine
 
-# This is a simple image
+LABEL maintainer="storage app"
 
-FROM  postgres:10.6 
 RUN apt-get update 
-RUN npm install -g create-react-app
+
 RUN npm install
-CMD ["npm", "start"]
+
+WORKDIR /app
+
+COPY . /app
+
+# Make port 80 available to the world outside this container
+EXPOSE 3002
+# Define environment variable
+ENV NAME World
+
+CMD ["npm", "app.js"]
+
+
+
+
+
+
+
+
+
