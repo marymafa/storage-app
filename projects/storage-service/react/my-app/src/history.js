@@ -1,3 +1,2 @@
-import createHistory from 'history/createBrowserHistory'
-
-export default createHistory()
+import createHistory from 'history/createBrowserHistory';
+export default createHistory();

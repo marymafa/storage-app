@@ -2,16 +2,21 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "description": "Node.js on Docker",
+  "author": "mary mafa",
+  "main": "server.js",
   "dependencies": {
     "axios": "^0.18.0",
     "chai": "^4.1.2",
+    "clipboard": "^2.0.4",
     "debug-log": "^1.0.1",
+    "express": "^4.16.1",
     "marked": "^0.3.17",
-    "react": "^16.2.0",
+    "react": "^16.8.2",
     "react-dom": "^16.2.0",
     "react-markdown": "^3.3.0",
     "react-modal": "^3.3.2",
-    "react-scripts": "^1.1.1",
+    "react-scripts": "^2.1.5",
     "react-transition-group": "^1.2.1",
     "request": "^2.85.0"
   },
@@ -20,5 +25,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

@@ -1,27 +1,15 @@
-FROM node:8.10.0-alpine
+FROM node:11.10.0
 
-LABEL maintainer="storage app"
+WORKDIR /usr/src/app
 
-RUN apt-get update 
+RUN npm install serve -g
 
+COPY package*.json ./
 RUN npm install
 
-WORKDIR /app
+COPY . .
+RUN  ls -l
+RUN npm build
 
-COPY . /app
-
-# Make port 80 available to the world outside this container
-EXPOSE 3002
-# Define environment variable
-ENV NAME World
-
-CMD ["npm", "app.js"]
-
-
-
-
-
-
-
-
-
+EXPOSE 8080
+CMD [ "serve", "-s", "build" ]
