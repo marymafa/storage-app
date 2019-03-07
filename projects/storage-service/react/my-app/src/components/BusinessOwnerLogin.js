@@ -22,7 +22,6 @@ class BusinessOwnerLogin extends React.Component {
         console.log("removed", sessionStorage.removeItem('jwt-secret'))
     }
     async  postData() {
-   
 
         let formInput = {
             email: this.props.email,
@@ -93,10 +92,9 @@ class BusinessOwnerLogin extends React.Component {
         console.log("this is my state", this.props);
         return (
             <div>
-                <div className="link">
-                <button type="button" value="Submit" onClick={() => this.removeIten()}><Link to="/" >Logout</Link></button>|
                 <Link to="/businessOwnerSignup">signup</Link>
-                </div>
+                <button type="button" value="Submit" onClick={() => this.removeIten()}><Link to="/" >Logout</Link></button>|
+                
                 <h3>please fill this form</h3>
                 <div>
                     <label>Email</label>
