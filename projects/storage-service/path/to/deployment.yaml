@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-kubernetes
+  name: node-kubernetes
 spec:
   selector:
     matchLabels:
-      app: hello-kubernetes
+      app: node-kubernetes
   replicas: 1
   template:
     metadata:
       labels:
-        app: hello-kubernetes
+        app: node-kubernetes
     spec:
       containers:
-      - name: hello-kubernetes
-        image: docker.io/bricerisingslalom/hello-k8s:latest
+      - name: node-kubernetes
+        image: docker.io/bricerisingslalom/node-k8s:latest
         ports:
         - containerPort: 
         
