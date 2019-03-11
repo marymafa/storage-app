@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-kubernetes
+  name: node-kubernetes
 spec:
   selector:
     matchLabels:
-      app: app-kubernetes
+      app: node-kubernetes
   replicas: 1
   template:
     metadata:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app-kubernetes
-        image: docker.io/bricerisingslalom/app-k8s:latest
+        image: docker.io/bricerisingslalom/node-k8s:latest
         ports:
         - containerPort: 
      
