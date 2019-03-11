@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-kubernetes
+  name: app-kubernetes
 spec:
   selector:
     matchLabels:
-      app: node-kubernetes
+      app: app-kubernetes
   replicas: 1
   template:
     metadata:
@@ -13,28 +13,8 @@ spec:
         app: node-kubernetes
     spec:
       containers:
-      - name: node-kubernetes
-        image: docker.io/bricerisingslalom/node-k8s:latest
+      - name: app-kubernetes
+        image: docker.io/bricerisingslalom/app-k8s:latest
         ports:
         - containerPort: 
-        
-        web:
-    build: 
-      context: .
-    ports: 
-      - 80:5585
-    command: npm start
-    network_mode: service:db 
-    links:
-      - db
-    environment:
-       DATABASE_URL=postgres://postgres:mm1995@db:5432/store_products
-      db:
-image: postgres 
-restart: always
-ports:
-  - "5432:5432" //default postgres port 
-environment: 
-  - POSTGRES_USER=postgres
-  - POSTGRES_PASSWORD=mm1995
-  - POSTGRES_DB=store_products
+     
