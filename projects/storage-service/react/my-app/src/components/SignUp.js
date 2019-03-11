@@ -95,10 +95,8 @@ class SignUp extends React.Component {
     render() {
         return (
             <div>
-                <div className="link"> 
                     <button type="button" value="Submit" onClick={() => this.removeIten()}><Link to="/" >Logout</Link></button>|
                     <Link to="/login" >login</Link>
-                </div>
                 <h3>please fill this form</h3>
                 <div>
                     <label>username</label>

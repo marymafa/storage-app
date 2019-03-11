@@ -96,10 +96,8 @@ class LogIn extends React.Component {
     render() {
         return (
             <div >
-                <div className="link">
                     <Link to="/signUp" >signup</Link>|
                     <Link to="/" >Logout</Link>|
-                </div>
                 <h3>please fill this form</h3>
                 <div>
                     <label>Email</label>
