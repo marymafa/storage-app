@@ -12,17 +12,22 @@ spec:
   type: NodePort
   selector:
     app: node-pod
----
-
-kind: Service
-metadata:
-  name: node-app
-  labels:
-    app: node-app
-spec:
-  ports:
-  - port: 80
-    targetPort: 4000
-  type: NodePort
-  selector:
-    app: node-pod   
+    web:
+    build:
+      context: .
+    ports:
+      - 80:5585
+    command: npm start
+    network_mode: service:db
+    links:
+      - db
+    environment: DATABASE_URL=postgres://postgres:mm1995@db:5432/store_products
+image: postgres
+restart: always
+ports:
+  - "5432:5432"
+environment:
+  - POSTGRES_USER=postgres
+  - POSTGRES_PASSWORD=mm1995
+  - POSTGRES_DB=store_products
+     
