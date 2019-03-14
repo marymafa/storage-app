@@ -1,4 +1,4 @@
----
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -13,4 +13,16 @@ spec:
   selector:
     app: node-pod
 ---
-     
+
+kind: Service
+metadata:
+  name: node-app
+  labels:
+    app: node-app
+spec:
+  ports:
+  - port: 80
+    targetPort: 4000
+  type: NodePort
+  selector:
+    app: node-pod   
