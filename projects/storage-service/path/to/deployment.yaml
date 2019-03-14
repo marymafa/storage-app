@@ -1,20 +1,16 @@
-apiVersion: apps/v1
-kind: Deployment
+---
+apiVersion: v1
+kind: Service
 metadata:
-  name: node-kubernetes
+  name: node-app
+  labels:
+    app: node-app
 spec:
+  ports:
+  - port: 80
+    targetPort: 4000
+  type: NodePort
   selector:
-    matchLabels:
-      app: node-kubernetes
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: node-kubernetes
-    spec:
-      containers:
-      - name: app-kubernetes
-        image: docker.io/bricerisingslalom/node-k8s:latest
-        ports:
-        - containerPort: 
+    app: node-pod
+---
      

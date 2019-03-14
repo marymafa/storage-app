@@ -1,14 +1,18 @@
-
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: postgres
+  labels:
+    app: react-app-container
+    tier: frondend
+  name: react-app
 spec:
-  selector:
-    app: postgres-container
-    tier: backend
   ports:
-  - name: postgres
+  - port: 5432
     protocol: TCP
-    port: 5432
-    targetPort: 5432
+  selector:
+    app: react-app
+  sessionAffinity: None
+  type: ClusterIP
+
+
+  

@@ -1,38 +1,21 @@
-apiVersion: v1
-kind: Deployment
-metadata:
-  name: hello-kubernetes
-spec:
-  selector:
-    matchLabels:
-      app: hello-kubernetes
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: hello-kubernetes
-    spec:
-      containers:
-        - name: hello-kubernetes
-          image: docker.io/bricerisingslalom/hello-k8s:latest
-          ports:
-            - containerPort:
 
-          web:
-    build:
-      context: .
-    ports:
-      - 80:5585
-    command: npm start
-    network_mode: service:db
-    links:
-      - db
-    environment: DATABASE_URL=postgres://postgres:mm1995@db:5432/store_products
-image: postgres
-restart: always
-ports:
-  - "5432:5432"
-environment:
-  - POSTGRES_USER=postgres
-  - POSTGRES_PASSWORD=mm1995
-  - POSTGRES_DB=store_products
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: reatc-app
+  labels:
+    app: react-app
+spec:
+  ports:
+  - port: 80
+    targetPort: 4000
+  type: ReactPort
+  selector:
+    app: react-pod
+---
+
+
+
+
+
