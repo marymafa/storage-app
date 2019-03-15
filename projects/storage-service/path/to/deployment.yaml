@@ -1,33 +1,21 @@
-
-apiVersion: v1
-kind: Service
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: node-app
+  name: nginx-deployment
   labels:
-    app: node-app
+    app: nginx
 spec:
-  ports:
-  - port: 80
-    targetPort: 4000
-  type: NodePort
+  replicas: 3
   selector:
-    app: node-pod
-    web:
-    build:
-      context: .
-    ports:
-      - 80:5585
-    command: npm start
-    network_mode: service:db
-    links:
-      - db
-    environment: DATABASE_URL=postgres://postgres:mm1995@db:5432/store_products
-image: postgres
-restart: always
-ports:
-  - "5432:5432"
-environment:
-  - POSTGRES_USER=postgres
-  - POSTGRES_PASSWORD=mm1995
-  - POSTGRES_DB=store_products
-     
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: express-app
+        ports:
+        - containerPort: 80
