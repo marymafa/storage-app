@@ -1,18 +1,16 @@
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
-  labels:
-    app: react-app-container
-    tier: frondend
-  name: react-app
+  name: my-service
 spec:
-  ports:
-  - port: 5432
-    protocol: TCP
   selector:
-    app: react-app
-  sessionAffinity: None
-  type: ClusterIP
-
-
-  
+    app: MyApp
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 9376
+  - name: https
+    protocol: TCP
+    port: 443
+    targetPort: 9377
