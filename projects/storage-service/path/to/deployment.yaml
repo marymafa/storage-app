@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: express-app-deployment
   labels:
-    app: nginx
+    app: express-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: express-app
   template:
     metadata:
       labels:
-        app: nginx
+        app: express-app
     spec:
       containers:
-      - name: nginx
+      - name: express-app
         image: express-app
         ports:
         - containerPort: 80
