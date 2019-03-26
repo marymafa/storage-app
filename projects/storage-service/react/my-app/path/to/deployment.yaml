@@ -21,6 +21,4 @@ spec:
         - containerPort: 80
 
 
-
-
-
+        
