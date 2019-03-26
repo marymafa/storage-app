@@ -16,9 +16,6 @@ spec:
     spec:
       containers:
       - name: storage-app
-        image: react-app
+        image: mm1995/react-app
         ports:
         - containerPort: 80
-
-
-        

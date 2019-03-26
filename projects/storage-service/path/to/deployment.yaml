@@ -1,42 +1,21 @@
-# apiVersion: apps/v1
-# kind: Deployment
-# metadata:
-#   name: express-app-deployment
-#   labels:
-#     app: express-app
-# spec:
-#   replicas: 3
-#   selector:
-#     matchLabels:
-#       app: express-app
-#   template:
-#     metadata:
-#       labels:
-#         app: express-app
-#     spec:
-#       containers:
-#       - name: express-app
-#         image: express-app
-#         ports:
-#         - containerPort: 80
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: express-app-deployment
+  labels:
+    app: express-app
 spec:
-  containers:
-    - name: test-container
-      image: express-app
-      livenessProbe:
-        httpGet:
-          path: /healthz
-          port: 8080
-        initialDelaySeconds: 3
-        periodSeconds: 3
-      readinessProbe:
-        httpGet:
-          path: /healthz
-          port: 8080
-        initialDelaySeconds: 3
-        periodSeconds: 3
+  replicas: 3
+  selector:
+    matchLabels:
+      app: express-app
+  template:
+    metadata:
+      labels:
+        app: express-app
+    spec:
+      containers:
+      - name: express-app
+        image: mm1995/express-app
+        ports:
+        - containerPort: 80
