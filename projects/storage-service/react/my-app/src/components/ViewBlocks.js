@@ -11,7 +11,7 @@ export default class ViewBlocks extends Component {
     }
 
     componentWillMount() {
-        axios.get("http://localhost:3002/blockData").then(result => {
+        axios.get("http://localhost:3003/blockData").then(result => {
             this.setState({ block: result.data })
         })
         console.log("block", this.state.block);

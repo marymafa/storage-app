@@ -31,7 +31,7 @@ class UnitTypesFrom extends React.Component {
         }
 
         if (this.isEmpty(errors)) {
-            var postNewData = await axios.post('http://localhost:3002/unitTypesData', formInput);
+            var postNewData = await axios.post('http://localhost:3003/unitTypesData', formInput);
             this.setState({
                 redirect: true,
             })

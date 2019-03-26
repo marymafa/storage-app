@@ -12,7 +12,7 @@ export default class AvailableUnits extends Component {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:3002/unitsData").then(result => {
+        axios.get("http://localhost:3003/unitsData").then(result => {
             this.setState({ availableUnits: result.data })
         })
     }

@@ -11,7 +11,7 @@ export default class UserDetails extends React.Component {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:3002/signUpData").then(result => {
+        axios.get("http://localhost:3003/signUpData").then(result => {
             this.setState({ customer: result.data })
         })
     }

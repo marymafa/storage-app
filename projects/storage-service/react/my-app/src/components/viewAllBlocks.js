@@ -15,7 +15,7 @@ class AllBlocks extends Component {
         this.redirectData = this.redirectData.bind(this)
     }
     componentDidMount() {
-        axios.get("http://localhost:3002/blockData").then(result => {
+        axios.get("http://localhost:3003/blockData").then(result => {
             this.setState({ allBlocks: result.data })
         })
         console.log("this is reaact state", this.state.allBlocks);

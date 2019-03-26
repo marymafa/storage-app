@@ -16,7 +16,7 @@ class AllUnits extends Component {
         this.RentAUnit = this.RentAUnit.bind(this);
     }
     componentDidMount() {
-        axios.get("http://localhost:3002/unitsData").then(result => {
+        axios.get("http://localhost:3003/unitsData").then(result => {
             this.setState({ unit: result.data })
         })
     }
@@ -28,7 +28,7 @@ class AllUnits extends Component {
         var token = sessionStorage.getItem('jwt-secret');
         var decoded = jwt_decode(JSON.parse(token).token);
         console.log("token :", decoded);
-        var postNewData = await axios.post('http://localhost:3002/RentAUnit', {
+        var postNewData = await axios.post('http://localhost:3003/RentAUnit', {
             customerEmail: decoded.email,
             unit_id: this.props.unit_id
         });

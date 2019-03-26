@@ -12,7 +12,7 @@ export default class ViewCustomerDetails extends Component {
     }
     componentDidMount() {
 
-        axios.get("http://localhost:3002/loginData").then(result => {
+        axios.get("http://localhost:3003/loginData").then(result => {
             this.setState({ users: result.data })
         })
     }

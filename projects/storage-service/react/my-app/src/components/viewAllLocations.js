@@ -14,7 +14,7 @@ class AllLocations extends Component {
         }
     }
     componentDidMount() {
-        axios.get("http://localhost:3002/locationData").then(result => {
+        axios.get("http://localhost:3003/locationData").then(result => {
             this.setState({ allLocations: result.data })
             console.log("selected", result.data);
         })

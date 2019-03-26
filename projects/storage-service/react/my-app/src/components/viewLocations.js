@@ -9,7 +9,7 @@ export default class ViewLocations extends Component {
         }
     }
     componentDidMount() {
-        axios.get("http://localhost:3002/locationData").then(result => {
+        axios.get("http://localhost:3003/locationData").then(result => {
             console.log("result", result);
             this.setState({ location: result.data })
         })

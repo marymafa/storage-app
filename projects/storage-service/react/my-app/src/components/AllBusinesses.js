@@ -17,7 +17,7 @@ class AllBusinesses extends Component {
         this.redirectData = this.redirectData.bind(this)
     }
     componentDidMount() {
-        axios.get("http://localhost:3002/data").then(result => {
+        axios.get("http://localhost:3003/data").then(result => {
             this.setState({ business: result.data })
         })
 

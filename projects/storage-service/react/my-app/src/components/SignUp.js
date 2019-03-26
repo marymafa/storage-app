@@ -34,7 +34,7 @@ class SignUp extends React.Component {
             console.log(errors);
         }
         if (this.isEmpty(errors)) {
-            var postNewData = await axios.post('http://localhost:3002/signUpData', formInput);
+            var postNewData = await axios.post('http://localhost:3003/signUpData', formInput);
             this.setState({
                 redirect: true,
             })
