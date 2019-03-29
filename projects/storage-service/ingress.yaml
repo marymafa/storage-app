@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: example-ingress
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /deployment
+          backend:
+            serviceName: react-app
+            servicePort: 5678
+        - path: /deployment
+          backend:
+            serviceName: express-app
+            servicePort: 5678
