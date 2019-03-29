@@ -19,8 +19,8 @@ spec:
         image: mm1995/express-app
         ports:
         - containerPort: 80
-        env:
-        database-name: store_prodcuts
-        database-user: postgres
-        database-password: TCGPC1
-        connect-postgres: postgres://postgres:TCGPC1@localhost:5432/store_products 
+        # env:
+        # databaseName: store_prodcuts
+        # databaseUser: postgres
+        # databasePassword: TCGPC1
+        # connectPostgres: postgres://postgres:TCGPC1@localhost:5432/store_products 
