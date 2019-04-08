@@ -1,18 +1,31 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: example-ingress
+  name: storage-system
+  namespace: default
   annotations:
-    ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "gce"
 spec:
+  tls:
+  - hosts:
+    - mary.thecodingground.com
+    secretName: mysite-tls
+  backend:
+    serviceName: ghost
+    servicePort: 80
   rules:
-  - http:
+  - host: mary.thecodingground.com
+    http:
       paths:
-        - path: /deployment
-          backend:
-            serviceName: react-app
-            servicePort: 5678
-        - path: /deployment
-          backend:
-            serviceName: express-app
-            servicePort: 5678
+      - path: /*
+        backend:
+          serviceName: express-app
+          servicePort: 80
+  - host: mary.thecodingground.com
+    http:
+      paths:
+      - path: /to/deployment
+        backend:
+          serviceName: react-app
+          servicePort: 8080
