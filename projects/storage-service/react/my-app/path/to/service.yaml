@@ -1,19 +1,17 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: react
-  namespace: default
-  labels:
-    app: react
-  annotations:
-    service.beta.kubernetes.io/aws-node-port-type: "nlb"
-spec:
-  externalTrafficPolicy: Local
-  ports:
-  - name: http
-    port: 8080
-    protocol: TCP
-    targetPort: 80
-  selector:
-    app: react
-  type: NodePort
+ apiVersion: v1
+ kind: Service
+ metadata:
+   labels:
+     app: myapp
+     part: front
+   name: frontapp
+   namespace: default
+ spec:
+   ports:
+   - port: 80
+     protocol: TCP
+     targetPort: 80 # Port on the pod with 'back' application
+   selector:
+     app: myapp
+     part: front
+   type: NodePort

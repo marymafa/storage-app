@@ -11,9 +11,9 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: react
-          servicePort: 8080
+          serviceName: frontapp
+          servicePort: 80
       - path: /
         backend:
-          serviceName: node
-          servicePort:  3001
+          serviceName: backapp
+          servicePort:  80
