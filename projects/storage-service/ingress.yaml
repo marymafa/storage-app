@@ -12,8 +12,8 @@ spec:
       - path: /
         backend:
           serviceName: frontapp
-          servicePort: 80
+          servicePort:  3000
       - path: /
         backend:
           serviceName: backapp
-          servicePort:  80
+          servicePort:   8080

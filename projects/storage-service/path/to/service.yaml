@@ -8,9 +8,9 @@
    namespace: default
  spec:
    ports:
-   - port: 9000
+   - port: 80
      protocol: TCP
-     targetPort: 9000 # Port on the pod with 'back' application
+     targetPort:  3000 # Port on the pod with 'back' application
    selector:
      app: myapp
      part: back
